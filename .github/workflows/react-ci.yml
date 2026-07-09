@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  IMAGE_NAME: KR-AM-Test-Frontend
+  IMAGE_NAME: kr-am-frontend
 
 jobs:
 
