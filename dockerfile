@@ -14,6 +14,9 @@ RUN npm run build
 # Production Stage
 FROM nginx:alpine
 
+# Add this line to pull down security patches for OS packages like libexpat
+RUN apk update && apk upgrade --no-cache
+
 COPY --from=builder /app/build /usr/share/nginx/html
 
 EXPOSE 80
