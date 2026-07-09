@@ -83,3 +83,9 @@ jobs:
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
           docker push ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
+
+      - name: CI Completed
+        run: |
+          echo "=================================="
+          echo "CI Pipeline Completed Successfully"
+          echo "=================================="
